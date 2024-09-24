@@ -62,8 +62,9 @@
 #### Create superuser
     > python manage.py createsuperuser
 
-#### To get the sql info in the terminal
-    > python manage.py sqlmigrate app_name migration_name
+#### To add the model into db we use:
+    > python manage.py makemigrations
+    > python manage.py migrate
 
 #### To register the app in the admin.py
 ```python
