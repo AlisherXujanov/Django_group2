@@ -1,0 +1,29 @@
+<nav>
+
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    
+</nav>
+
+
+<style>
+    nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        color: yellow;
+    }
+    
+</style>
