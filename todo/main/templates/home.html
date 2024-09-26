@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>{{ title }}</h1>
+<h1>{{ title }}</h1>
 
-  <hr />
+<hr />
 
-  <h2>{{ todo.title }}</h2>
-  <h3>{{ todo.description }}</h3>
+<div class="container">
+  {% for item in todos %}
+  <div class="card p-3 mb-2 bg-secondary text-light">
+    <h5 class="card-title">{{ item.title|title }}</h5>
+    <p class="card-text">{{ item.description }}</p>
+    <a href="#" class="btn btn-primary">Выполнено</a>
+  </div>
+  {% endfor %}
+</div>
 {% endblock %}
-

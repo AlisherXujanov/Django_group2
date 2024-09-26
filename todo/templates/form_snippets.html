@@ -1,0 +1,20 @@
+{% load django_bootstrap5 %}
+
+<div class="container">
+  <form method="POST" enctype="multipart/form-data">
+    {% comment %} 
+        CSRF_TOKEN  defends us from cross-site request forgery attacks 
+    {% endcomment %}
+    {% csrf_token %}
+
+    {% bootstrap_form form %}
+
+    <button type="submit" class="btn btn-success float-end">
+      {% if button_text %}
+        {{ button_text }}
+      {% else %}
+        Submit
+      {% endif %}
+    </button>
+  </form>
+</div>

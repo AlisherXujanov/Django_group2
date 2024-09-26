@@ -19,6 +19,7 @@ class Todos(models.Model):
     class Meta:
         verbose_name = 'Todo'
         verbose_name_plural = 'Todos'
+        ordering = ['-created_at']
 
     def __str__(self):
         return f"{self.title} of - {self.owner}. Deadline: {self.deadline}. Status: {self.completed}"
