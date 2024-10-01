@@ -1,6 +1,7 @@
 {% load django_bootstrap5 %}
 {% bootstrap_css %}
 {% bootstrap_javascript %}
+{% load static %}
 
 
 <!DOCTYPE html>
@@ -11,6 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo</title>
 
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/navbar.css' %}">
     {% block css %}
 
     {% endblock %}
@@ -19,7 +22,6 @@
         CRUD  ->  Create Read Update Delete
       -->
 </head>
-
 <body>
     <div id="messsages">
         {% bootstrap_messages %}
@@ -34,43 +36,4 @@
         </main>
     </section>
 </body>
-
 </html>
-
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body>section {
-        width: 100%;
-        height: 100vh;
-        background-color: snow;
-        display: grid;
-        grid-template-columns: 300px 1fr;
-        gap: 10px;
-        padding: 30px;
-        transition: 0.2s;
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
-
-    button {
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-    }
-
-    #messages {
-        position: absolute;
-        top: 100px;
-        left: 50px;
-    }
-
-    /*# sourceMappingURL=base.css.map */
-</style>
