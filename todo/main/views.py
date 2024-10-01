@@ -40,6 +40,24 @@ def create_todo(request):
     return render(request, "create_todo.html", context)
 
 
+def update_todo(request, pk:int):
+    todo_obj = Todos.objects.get(id=pk)
+
+    if request.method == "POST":
+        form = TodoForm(request.POST, instance=todo_obj)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Todo updated successfully")
+            return redirect("home")
+
+    form = TodoForm(instance=todo_obj)
+    context = {
+        "title": "Update a new Todo",
+        "form": form
+    }
+    return render(request, "update_todo.html", context)
+
+
 def todo_details(request, pk:int):
     # todo_obj = Todos.objects.get(id=pk)
     todo_obj = get_object_or_404(Todos, id=pk)
@@ -49,3 +67,5 @@ def todo_details(request, pk:int):
         "todo": todo_obj
     }
     return render(request, 'todo_details.html', context)
+
+
