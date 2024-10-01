@@ -22,7 +22,7 @@ def about_page(request):
     return render(request, 'about.html', context)
 
 
-    # CRUD - Create, Read, Update, Delete
+# CRUD - Create, Read, Update, Delete
 def create_todo(request):
     if request.method == "POST":
         form = TodoForm(request.POST)

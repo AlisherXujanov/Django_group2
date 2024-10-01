@@ -6,6 +6,13 @@
 <hr />
 
 <div class="container">
+  <a href="{% url 'create_todo' %}" class="btn btn-primary btn-sm float-end">
+    Create todo
+  </a>
+
+  <hr>
+  <br>
+  
   {% for item in todos %}
   <div class="card p-3 mb-2 bg-secondary text-light">
     <h5 class="card-title">{{ item.title|title }}</h5>
