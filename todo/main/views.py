@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Todos
 from .forms import TodoForm
 from django.contrib import messages
@@ -38,3 +38,14 @@ def create_todo(request):
         "form": form
     }
     return render(request, "create_todo.html", context)
+
+
+def todo_details(request, pk:int):
+    # todo_obj = Todos.objects.get(id=pk)
+    todo_obj = get_object_or_404(Todos, id=pk)
+
+    context = {
+        "title": "Details of: " + todo_obj.title.title(),
+        "todo": todo_obj
+    }
+    return render(request, 'todo_details.html', context)
