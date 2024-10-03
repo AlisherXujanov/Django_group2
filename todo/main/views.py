@@ -69,3 +69,9 @@ def todo_details(request, pk:int):
     return render(request, 'todo_details.html', context)
 
 
+def delete_todo_item(request, pk:int):
+    todo_obj = get_object_or_404(Todos, id=pk)
+    todo_obj.delete()
+    messages.warning(request, "Todo deleted successfully")
+    return redirect("home")
+    
