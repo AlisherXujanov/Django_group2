@@ -1,0 +1,56 @@
+.todos-container {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10 10px 10px 20px;
+  border-left: 1px solid lightgray;
+  margin-top: 50px;
+  position: relative;
+}
+.todos-container .todo-card {
+  width: 350px;
+  height: 300px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.todos-container .todo-card .todo-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.todos-container .todo-card .todo-title h2 {
+  width: 80%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.todos-container .todo-card .todo-title button.btn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.todos-container .todo-card .todo-body {
+  overflow: hidden;
+  width: 95%;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+.todos-container .todo-card .todo-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  position: absolute;
+  bottom: 20px;
+}
+.todos-container .todo-card .todo-footer .deadline {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=home.css.map */

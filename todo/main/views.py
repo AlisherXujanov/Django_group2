@@ -59,7 +59,6 @@ def update_todo(request, pk:int):
 
 
 def todo_details(request, pk:int):
-    # todo_obj = Todos.objects.get(id=pk)
     todo_obj = get_object_or_404(Todos, id=pk)
 
     context = {
