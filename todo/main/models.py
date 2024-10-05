@@ -1,10 +1,11 @@
 from tabnanny import verbose
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Todos(models.Model):
     title = models.CharField(max_length=50) # Название задачи
-    owner = models.CharField(max_length=50) # Владелец задачи
+    owner = models.ForeignKey(User, on_delete=models.CASCADE) # Владелец задачи
     description = models.TextField() # Описание задачи
     deadline = models.DateField() # Дедлайн задачи (время выполнения)
     completed = models.BooleanField(default=False) # Статус задачи (выполнена/нет)
