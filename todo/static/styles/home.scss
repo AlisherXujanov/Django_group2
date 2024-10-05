@@ -60,5 +60,12 @@
                 @include flexCenter();
             }
         }
+
+        &.create-card-button {
+            font-size: 3em;
+            @include flexCenter();
+            background-color: lightgray;
+            cursor: pointer;
+        }
     }
 }
