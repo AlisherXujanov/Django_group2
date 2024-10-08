@@ -4,10 +4,9 @@ from .models import Todos
 
 
 class TodoForm(forms.ModelForm):
-    
     class Meta:
         model = Todos
-        fields = "__all__"
+        fields = ["title", "description",  "deadline",  "color",  "background_color" ]
 
 
 

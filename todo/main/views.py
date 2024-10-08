@@ -27,6 +27,8 @@ def create_todo(request):
     if request.method == "POST":
         form = TodoForm(request.POST)
         if form.is_valid():
+            form.save(commit=False)
+            form.instance.owner = request.user
             form.save()
             messages.success(request, "Todo created successfully")
             return redirect("home")
