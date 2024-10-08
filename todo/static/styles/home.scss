@@ -18,6 +18,7 @@
         height: 300px;
         border-radius: 10px;
         padding: 10px;
+        position: relative;
 
         .todo-title {
             display: flex;
@@ -30,11 +31,13 @@
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             }
 
-            button.btn {
-                width: 30px;
-                height: 30px;
-                @include flexCenter();
-                padding: 0;
+            img {
+                width: 60px;
+                height: 50px;
+                position: relative;
+                left: 10px;
+                bottom: 5px;
+                border-radius: 5px;
             }
         }
 
@@ -49,15 +52,34 @@
         }
 
         .todo-footer {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
+            width: 100%;
+            @include flexCenter(row, space-between);
             position: absolute;
+            right: 10px;
             bottom: 20px;
+            padding: 0 10px;
+
 
             .deadline {
                 text-align: left;
                 @include flexCenter();
+            }
+
+
+            .todo-action-buttons {
+                @include flexCenter(row, $gap: 2px);
+
+                a.btn {
+                    width: 30px;
+                    height: 30px;
+                    @include flexCenter(row);
+                    padding: 0;
+
+                    svg {
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
             }
         }
 
