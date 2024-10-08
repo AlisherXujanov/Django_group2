@@ -6,7 +6,7 @@ class Todos(models.Model):
     title = models.CharField(max_length=50) # Название задачи
     owner = models.ForeignKey(User, on_delete=models.CASCADE) # Владелец задачи
     description = models.TextField() # Описание задачи
-    deadline = models.DateField() # Дедлайн задачи (время выполнения)
+    deadline = models.DateTimeField() # Дедлайн задачи (время выполнения)
     completed = models.BooleanField(default=False) # Статус задачи (выполнена/нет)
     # ------------------- Время создания и обновления задачи -------------------
     created_at = models.DateTimeField(auto_now_add=True) # Время создания задачи
