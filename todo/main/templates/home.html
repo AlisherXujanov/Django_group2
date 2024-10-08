@@ -14,7 +14,16 @@
       <div class="todo-card" style="background-color: {{ item.background_color }}; color:{{ item.color }}">
         <div class="todo-title">
           <h2 class="card-title">{{ item.title|title }}</h2>
-          <button type="button" onclick="event.target.requestFullscreen()" class="btn todo-author-tooltip" style="background-color: {{ item.background_color }};"><img src="{{ item.owner.profile.image.url }}" alt="Image not found" width="60" height="50" /></button>
+          <button type="button" onclick="event.target.requestFullscreen()" class="btn todo-author-tooltip" style="background-color: {{ item.background_color }};">
+            <div class="owner-tooltip-fullname">
+              {% if item.owner.first_name and item.owner.last_name %}
+                {{ item.owner.first_name }} {{ item.owner.last_name }}
+              {% else %}
+                {{ item.owner.username }}
+              {% endif %}
+            </div>
+            <img src="{{ item.owner.profile.image.url }}" alt="Image not found" width="60" height="50" />
+          </button>
         </div>
         <div class="todo-body">
           <p>{{ item.description }}</p>

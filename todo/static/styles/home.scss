@@ -39,6 +39,28 @@
                 bottom: 5px;
                 border-radius: 5px;
             }
+
+            button {
+                position: relative;
+
+                .owner-tooltip-fullname {
+                    position: absolute;
+                    right: 55px;
+                    top: -10px;
+                    font-weight: bold;
+                    border-radius: 10px;
+                    text-transform: uppercase;
+                    background-color: lightgoldenrodyellow;
+                    color: black;
+                    display: inline-block;
+                    padding: 10px 20px;
+                    display: none;
+                }
+
+                &:hover .owner-tooltip-fullname {
+                    display: block;
+                }
+            }
         }
 
         .todo-body {

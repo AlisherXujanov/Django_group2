@@ -34,6 +34,25 @@
   bottom: 5px;
   border-radius: 5px;
 }
+.todos-container .todo-card .todo-title button {
+  position: relative;
+}
+.todos-container .todo-card .todo-title button .owner-tooltip-fullname {
+  position: absolute;
+  right: 55px;
+  top: -10px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-transform: uppercase;
+  background-color: lightgoldenrodyellow;
+  color: black;
+  display: inline-block;
+  padding: 10px 20px;
+  display: none;
+}
+.todos-container .todo-card .todo-title button:hover .owner-tooltip-fullname {
+  display: block;
+}
 .todos-container .todo-card .todo-body {
   overflow: hidden;
   width: 95%;
