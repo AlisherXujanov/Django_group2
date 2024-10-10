@@ -1,5 +1,8 @@
+@import "./settings";
+
 nav {
     transition: 0.2s;
+
 
     &.left-navbar {
         background-color: #eee;
@@ -60,6 +63,10 @@ nav {
             .first-list,
             .new-list {
                 margin: 12px 5px;
+
+                svg {
+                    margin-right: 5px;
+                }
             }
 
             h6 {
@@ -73,33 +80,25 @@ nav {
             }
 
             .tgs {
-                display: flex;
-                flex-direction: row;
+                @include flexCenter(row, flex-start, center, 5px, wrap);
+
+                &>div {
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    @include flexCenter(row, center, center, 0px);
+                }
 
                 .tag-1 {
                     background-color: lightblue;
-                    font-weight: bold;
-                    font-size: 13px;
-                    border-radius: 5px;
-                    padding: 5px 12px;
                 }
 
                 .tag-2 {
                     background-color: lightpink;
-                    font-weight: bold;
-                    font-size: 13px;
-                    border-radius: 5px;
-                    padding: 5px 12px;
-                    margin-left: 5px;
                 }
 
                 .new-tag {
                     background-color: rgba(102, 102, 102, 0.4);
-                    font-weight: bold;
-                    font-size: 13px;
-                    border-radius: 5px;
-                    padding: 5px 12px;
-                    margin-left: 5px;
                 }
             }
         }
@@ -108,8 +107,27 @@ nav {
     .parametrs {
         margin-top: 50px;
 
-        div {
-            margin-bottom: 10px;
+        &>div {
+            &>a {
+                width: 110px;
+                display: inline-block;
+                padding: 5px 10px;
+                background-color: lightgray;
+                border-radius: 10px;
+                margin: 0 20px 10px 0;
+
+                svg {
+                    margin-right: 5px;
+                }
+
+                &.sign-in-link {
+                    background-color: lightgray;
+                }
+
+                &.login-link {
+                    background-color: lightgray;
+                }
+            }
         }
     }
 }

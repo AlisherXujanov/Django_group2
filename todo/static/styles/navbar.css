@@ -49,6 +49,12 @@ nav .sections .lists .first-list,
 nav .sections .lists .new-list {
   margin: 12px 5px;
 }
+nav .sections .lists .personal svg,
+nav .sections .lists .work svg,
+nav .sections .lists .first-list svg,
+nav .sections .lists .new-list svg {
+  margin-right: 5px;
+}
 nav .sections .lists h6 {
   margin: 15px 0;
 }
@@ -58,33 +64,48 @@ nav .sections .tags h6 {
 nav .sections .tags .tgs {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+nav .sections .tags .tgs > div {
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  flex-wrap: nowrap;
 }
 nav .sections .tags .tgs .tag-1 {
   background-color: lightblue;
-  font-weight: bold;
-  font-size: 13px;
-  border-radius: 5px;
-  padding: 5px 12px;
 }
 nav .sections .tags .tgs .tag-2 {
   background-color: lightpink;
-  font-weight: bold;
-  font-size: 13px;
-  border-radius: 5px;
-  padding: 5px 12px;
-  margin-left: 5px;
 }
 nav .sections .tags .tgs .new-tag {
   background-color: rgba(102, 102, 102, 0.4);
-  font-weight: bold;
-  font-size: 13px;
-  border-radius: 5px;
-  padding: 5px 12px;
-  margin-left: 5px;
 }
 nav .parametrs {
   margin-top: 50px;
 }
-nav .parametrs div {
-  margin-bottom: 10px;
+nav .parametrs > div > a {
+  width: 110px;
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: lightgray;
+  border-radius: 10px;
+  margin: 0 20px 10px 0;
+}
+nav .parametrs > div > a svg {
+  margin-right: 5px;
+}
+nav .parametrs > div > a.sign-in-link {
+  background-color: lightgray;
+}
+nav .parametrs > div > a.login-link {
+  background-color: lightgray;
 }/*# sourceMappingURL=navbar.css.map */
