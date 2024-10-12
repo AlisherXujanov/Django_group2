@@ -64,7 +64,7 @@ def todo_details(request, pk:int):
     todo_obj = get_object_or_404(Todos, id=pk)
 
     context = {
-        "title": "Details of: " + todo_obj.title.title(),
+        "title": todo_obj.title.title(),
         "todo": todo_obj
     }
     return render(request, 'todo_details.html', context)

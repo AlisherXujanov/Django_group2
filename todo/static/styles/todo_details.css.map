@@ -1,0 +1,1 @@
+{"version":3,"sources":["todo_details.scss","todo_details.css","_settings.scss"],"names":[],"mappings":"AAKQ;;EAEI,qBAAA;EACA,sBAAA;EACA,mBAAA;EACA,aAAA;EACA,sEAAA;EACA,cAAA;ACJZ;ADMY;;EACI,0BAAA;ACHhB;ADOQ;EACI,gBAAA;ACLZ;ADSY;EACI,qBAAA;ACPhB;ADSgB;EE1Bd,aAAA;EACA,mBF0BsC;EEzBtC,uBFyB2C;EExB3C,mBFwBmD;EEvBnD,QFuB2D;EEtB3D,iBANqF;EF6BnE,kBAAA;ACFpB","file":"todo_details.css"}

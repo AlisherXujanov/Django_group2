@@ -1,0 +1,36 @@
+@import "./settings";
+
+.todo-details-wrapper {
+    &>div {
+
+        h3,
+        h1 {
+            display: inline-block;
+            background-color: #eee;
+            border-radius: 10px;
+            padding: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 2em;
+
+            span {
+                text-transform: capitalize;
+            }
+        }
+
+        h3 {
+            font-size: 1.5em;
+        }
+
+        &.owner-container {
+            a {
+                display: inline-block;
+
+                h3 {
+                    @include flexCenter(row, center, center, 5px);
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }
+
+}

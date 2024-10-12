@@ -1,5 +1,48 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'styles/todo_details.css' %}" />
+{% endblock %}
 
 {% block content %}
-  <h1>{{ title }}</h1>
+  <div class="todo-details-wrapper">
+    <div class="title">
+      <h1><span>Details of -</span> {{ title }}</h1>
+    </div>
+
+    <br />
+
+    <div class="owner-container">
+      <a href="{% url 'profile_page' todo.owner.id %}">
+        <h3>
+          Autor 
+          <img src="{{ todo.owner.profile.image.url }}" 
+            class="owner-image"
+            width="20" height="20"
+          >
+        </h3>
+      </a>
+      <ul class="autor" type="square">
+        <li>{{ todo.owner }}</li>
+      </ul>
+    </div>
+
+    <br />
+
+    <div>
+      <h3>Description</h3>
+      <ul class="description_of_todo" type="square">
+        <li>
+          {{ todo.description }}
+        </li>
+      </ul>
+    </div>
+
+    <br />
+
+    <div class="date_of_todo_created">
+      <h2>{{ created_at }}</h2>
+    </div>
+  </div>
 {% endblock %}
